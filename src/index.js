@@ -1,5 +1,6 @@
 import "./style.css";
 import { createHomeTab, createMenuTab, createContactTab } from "./tab";
+import GitHubIcon from "./assets/github-mark.svg";
 
 function createNavElement() {
   // Create nav element
@@ -74,4 +75,21 @@ window.addEventListener("load", () => {
     setActiveTab(contactLi);
     createContactTab();
   });
+
+  // Create a div element for the footer content
+  const footerContent = document.createElement("div");
+  footerContent.innerHTML = `
+  <div style="display: flex; align-items: center; font-size: 10px; color: grey; padding: 6px;">
+    <span style="padding-right: 6px;">
+      <a target="_blank" href="https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page">
+        For educational purposes only.</a>
+      © 2023 Jakub Kanna.
+    </span>
+    <a href="http://github.com/jakubkanna">
+      <img src="${GitHubIcon}" width="16" height="16">
+    </a>
+  </div>
+`;
+  const footerElement = document.querySelector("footer");
+  footerElement.appendChild(footerContent);
 });

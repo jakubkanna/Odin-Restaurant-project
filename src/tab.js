@@ -1,3 +1,6 @@
+import pizzaImage from "./assets/flower-pizza.png";
+import pizzaPhoto from "./assets/pexels-vincent-rivaud-2471171.jpg";
+
 // class Tab is a template to create HTML tab inside main
 class Tab {
   constructor(title, imagePath, content) {
@@ -14,9 +17,10 @@ class Tab {
   }
   createImage() {
     let imgElement = document.createElement("img");
+
     Object.assign(imgElement, {
       id: "flower-pizza",
-      src: this.imagePath,
+      src: pizzaImage,
       alt: "flower-pizza",
     });
     this.main.appendChild(imgElement);
@@ -41,7 +45,7 @@ function createHomeTab() {
   //save data for this tab
   const homeTabData = {
     title: "Welcome",
-    image: "assets/flower-pizza.png",
+    image: pizzaImage,
     content: ` 🌸 Introducing Angelo's Pizzeria, where the aroma of freshly baked pizzas meets the vibrant energy of the flower market. Enjoy authentic Italian mastery with pizzas crafted by Angelo himself. Immerse in a floral oasis, savoring unique flavors amidst the blooms. Join us for a slice of heaven at the intersection of gastronomy and nature! 🍕🌺`,
   };
   //create new object and pass data
@@ -151,7 +155,7 @@ function createMenuTab() {
       cardElement.innerHTML = `
         <div>
           <img
-            src="assets/pexels-vincent-rivaud-2471171.jpg"
+            src=${pizzaPhoto}
             alt="food-image"
             srcset="" />
         </div>
@@ -170,7 +174,7 @@ function createMenuTab() {
   //
   const menuTabData = {
     title: "Menu",
-    image: "assets/flower-pizza.png",
+    image: pizzaImage,
     content: createMenuCards(),
   };
   const menuTab = new Tab(
@@ -189,7 +193,7 @@ function createContactTab() {
   //save data for this tab
   const contactTabData = {
     title: "Contact",
-    image: "assets/flower-pizza.png",
+    image: pizzaImage,
     content: `<p>Thank you for choosing Angelo's Pizzeria! We're delighted to assist you. Whether you have a question, feedback, or just want to say hello, feel free to get in touch with us.</p>
   
     <h3>Visit Us</h3>
