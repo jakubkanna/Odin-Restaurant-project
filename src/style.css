@@ -146,6 +146,15 @@ a {
   color: grey;
   cursor: pointer;
 }
+/* paragraph */
+p {
+  padding-top: 1rem;
+}
+/* headers */
+h3 {
+  padding-top: 2rem;
+  font-weight: 900;
+}
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,900;1,9..144,400;1,9..144,900&display=swap");
 #logo-type {
   background-color: var(--body-bg-color);
@@ -233,7 +242,7 @@ nav > ul > li {
   box-sizing: border-box;
   border-left: 1px solid grey;
   border-top: 1px solid grey;
-  padding: 48px;
+  padding: 12px;
   padding-bottom: 6rem;
 }
 #flower-pizza {
@@ -256,6 +265,7 @@ footer {
   justify-content: end;
   align-items: end;
 }
+
 main {
   display: grid;
 
@@ -286,4 +296,39 @@ main {
   #flower-pizza {
     display: block !important;
   }
+}
+.food-card {
+  display: flex;
+  padding-top: 24px;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+.food-card img {
+  max-height: 150px;
+  width: auto;
+}
+.food-card > :nth-child(2) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+.food-card > :nth-child(3) {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.food-name {
+  font-weight: 900;
+}
+.food-ingredients {
+  font-size: 10px;
+}
+.food-card button {
+  background-color: var(--angelo-font-color);
+  color: var(--body-bg-color);
+  padding: 12px;
+  border: none;
 }
