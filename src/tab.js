@@ -148,7 +148,7 @@ function createMenuTab() {
     menuElement.setAttribute("id", "food-menu");
     menuElement.innerHTML = `<h2>Pizza Classic 33cm</h2>`;
 
-    //for each pizzas element
+    //for each pizzas create card element
     for (const pizza of pizzas) {
       let cardElement = document.createElement("div");
       cardElement.setAttribute("class", "food-card");
@@ -183,14 +183,12 @@ function createMenuTab() {
     menuTabData.content
   );
 
-  //create contact tab
-
   return menuTab.createTab();
 }
 
-//
+//create contact tab
+
 function createContactTab() {
-  //save data for this tab
   const contactTabData = {
     title: "Contact",
     image: pizzaImage,
@@ -225,13 +223,11 @@ function createContactTab() {
   
     `,
   };
-  //create new object and pass data
   const contactTab = new Tab(
     contactTabData.title,
     contactTabData.image,
     contactTabData.content
   );
-  //create DOM element for this object with method
   return contactTab.createTab();
 }
 export { createHomeTab, createMenuTab, createContactTab };

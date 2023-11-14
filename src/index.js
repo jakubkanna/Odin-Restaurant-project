@@ -93,3 +93,23 @@ window.addEventListener("load", () => {
   const footerElement = document.querySelector("footer");
   footerElement.appendChild(footerContent);
 });
+
+class Car {
+  constructor(brand, color, engine) {
+    this.brand = brand;
+    this.color = color;
+    this.engine = engine;
+  }
+  driveForward() {
+    //go forward
+  }
+  driveBackward() {
+    //
+  }
+  driveLeft() {
+    //
+  }
+  driveRight() {
+    //
+  }
+}
